@@ -22,6 +22,6 @@ const callCounter = (fn) => {
 sum = callCounter(sum);
 
 //Call
-console.log(sum(1, 2, 3)); //Sum has been called 1 times
-console.log(sum(3, 4, 5)); //Sum has been called 2 times
-console.log(sum(6, 7, 8)); //Sum has been called 3 times
+console.log(sum(1, 2, 3)); //Sum has been called 1 times  6
+console.log(sum(3, 4, 5)); //Sum has been called 2 times  12
+console.log(sum(6, 7, 8)); //Sum has been called 3 times  21
