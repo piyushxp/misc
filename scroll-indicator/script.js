@@ -5,14 +5,16 @@ function fireOnScroll() {
 	//The height of the document element when scrolled
 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
+	var scrollHeight = document.documentElement.scrollHeight;
+	var clientHeight = document.documentElement.clientHeight;
 	// Total height of the document
-	var height = document.documentElement.scrollHeight;
+	var height = scrollHeight - clientHeight;
 
-	console.log({ winScroll }, { height });
+	console.log({ winScroll }, { scrollHeight }, { clientHeight });
 
 	//Percent conversion
 	var scrolled = (winScroll / height) * 100;
-	console.log(scrolled);
+	console.log(`scrolled ${scrolled} %`);
 
-	document.getElementById("myBar").style.width = scrolled + "%";
+	document.getElementById("myBar").style.width = Math.ceil(scrolled) + "%";
 }
